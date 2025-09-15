@@ -1,5 +1,5 @@
 import UserProfile from "../models/user.model.js";
-import { triggerIntegrations } from "../utils/integrationService.js";
+import { triggerIntegrations } from "../utils/triggerIntegrations.js";
 
 export const createUserProfile = async (req, res) => {
     try {

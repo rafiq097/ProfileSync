@@ -1,6 +1,6 @@
-import { appendRowToGoogleSheet } from "./providers/googleSheetsService.js";
-import { postToSlack } from "./providers/slackService.js";
-import { syncHubspotContact } from "./providers/hubspotService.js";
+import { appendRowToGoogleSheet } from "../services/googleSheetsService.js";
+import { postToSlack } from "../services/slackService.js";
+import { syncHubspotContact } from "../services/hubspotService.js";
 
 export const triggerIntegrations = async (user) => {
     const results = {};
