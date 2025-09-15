@@ -19,7 +19,7 @@ export const appendRowToGoogleSheet = async (user) => {
     if (result.success) {
       console.log(result);
       console.log("Google Sheets Row Added:", user);
-      
+
       return { success: true, message: result.message };
     } else {
       console.log(result.message);
@@ -29,7 +29,7 @@ export const appendRowToGoogleSheet = async (user) => {
         status: "failed",
         message: result.message
       });
-      
+
       return { success: false, message: result.message };
     }
   } catch (error) {
@@ -40,7 +40,7 @@ export const appendRowToGoogleSheet = async (user) => {
       status: "failed",
       message: error.message
     });
-    
+
     return { success: false, message: error.message };
   }
 };

@@ -44,7 +44,12 @@ export default function App() {
 
       if (res.status == 201) {
         toast.success("Profile Created Successfully!");
-        setForm({ firstName: "", lastName: "", phoneNumber: "", isMarried: false });
+        setForm({
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          isMarried: false,
+        });
       } else {
         toast.error("Failed to save profile");
       }

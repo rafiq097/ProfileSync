@@ -24,14 +24,14 @@ export const postToSlack = async (user) => {
       "```";
 
     const res = await axios.post(webhook, { text });
-    
+
     if (res.status == 200) {
       // console.log(res);
-      
+
       return { success: true, message: "Slack notified" };
     } else {
       // console.log(res);
-      
+
       const msg = `Slack returned ${res.status}`;
       await IntegrationEvent.create({
         userId: user._id,
