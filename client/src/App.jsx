@@ -34,7 +34,7 @@ export default function App() {
     }
 
     try {
-      const res = await fetch("/api/save", {
+      const res = await fetch("http://localhost:5000/api/v1/user-profiles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

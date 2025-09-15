@@ -26,11 +26,11 @@ export const postToSlack = async (user) => {
     const res = await axios.post(webhook, { text });
 
     if (res.status >= 200 && res.status < 300) {
-      console.log(res);
+      // console.log(res);
       
       return { success: true, message: "Slack notified" };
     } else {
-      console.log(res);
+      // console.log(res);
       
       const msg = `Slack returned ${res.status}`;
       await IntegrationEvent.create({
