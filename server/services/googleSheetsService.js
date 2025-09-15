@@ -18,7 +18,7 @@ export const appendRowToGoogleSheet = async (user) => {
 
     if (result.success) {
       console.log(result);
-      console.log("Google Sheets Row Added via Apps Script:", user);
+      console.log("Google Sheets Row Added:", user);
       
       return { success: true, message: result.message };
     } else {
