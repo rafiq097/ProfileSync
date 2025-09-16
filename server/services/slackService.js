@@ -27,7 +27,8 @@ export const postToSlack = async (user) => {
 
     if (res.status == 200) {
       // console.log(res);
-
+      console.log(`${firstName} ${lastName} notified to Slack!`);
+      
       return { success: true, message: "Slack notified" };
     } else {
       // console.log(res);

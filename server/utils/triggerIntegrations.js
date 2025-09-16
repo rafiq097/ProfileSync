@@ -1,6 +1,6 @@
 import { appendRowToGoogleSheet } from "../services/googleSheetsService.js";
 import { postToSlack } from "../services/slackService.js";
-import { syncHubspotContact } from "../services/hubspotService.js";
+import { pipeDriveService } from "../services/pipeDriveService.js";
 
 export const triggerIntegrations = async (user) => {
     const results = {};
@@ -18,9 +18,9 @@ export const triggerIntegrations = async (user) => {
     }
 
     try {
-        results.hubspot = await syncHubspotContact(user);
+        results.pipedrive = await pipeDriveService(user);
     } catch (err) {
-        results.hubspot = { success: false, message: err.message };
+        results.pipedrive = { success: false, message: err.message };
     }
 
     return results;
